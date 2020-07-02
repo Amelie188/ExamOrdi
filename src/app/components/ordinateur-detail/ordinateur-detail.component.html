@@ -1,0 +1,48 @@
+
+
+<h2>Tout savoir sur...</h2>
+
+  <div class="card" style="width: 25rem;">
+<div *ngIf="!isLoading">
+
+
+    <h1 class="">{{ ordinateurDetail.marque }}</h1>
+    <p class="card-text text-center">réf: {{ ordinateurDetail.id }}</p>
+    <div class="rounded mx-auto d-block" style="max-width: 540px;">
+        <div class="row no-gutters">
+          <div class="text-center">
+            <!-- <img src="{{ marque.image }}" class="rounded" alt="..."> -->
+          </div>
+          <div class="col-md-8">
+            <div class="card-body">
+
+              <img src="../../../assets/images/home-office-336373__340.png" class="img-fluid">
+              <h5 class="card-title">{{ ordinateurDetail.modele }}</h5>
+              <br>
+              
+              <p>{{ ordinateurDetail.type}}</p>
+              <p>{{ ordinateurDetail.category}}</p>
+              <br>
+
+              <p > Prix de vente: {{ ordinateurDetail.prixAchat}}</p>
+              <p>Prix d'achat: {{ ordinateurDetail.prixVente}}</p>
+              <p><span>Rentabilité:</span> {{ ordinateurDetail.prixVente - ordinateurDetail.prixAchat | number:'1.2-2'}}   €</p>
+              <br>
+
+              <p>Date d'entrée en stock: {{ ordinateurDetail.dateEntreStock | date: 'dd/MM/yyyy' }}</p>
+
+
+              <button class="btn btn-outline-secondary"><a [routerLink]="['/ordinateur']">Revenir à la liste</a></button>  
+
+            </div>
+          </div>
+        </div>
+      
+    </div>
+</div>
+</div>
+
+<div *ngIf="isLoading">
+    Patience, patience, ça charge....!!
+</div>
+

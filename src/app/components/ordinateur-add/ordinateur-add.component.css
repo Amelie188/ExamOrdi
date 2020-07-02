@@ -1,0 +1,11 @@
+label{
+    font-size: 1.3rem;
+}
+.btn-outline-dark{
+margin-top: 1rem;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}

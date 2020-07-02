@@ -1,0 +1,44 @@
+{
+  "ordinateur": [
+    {
+      "id": 1,
+      "modele": "Latitude 3500 - 15.68",
+      "marque": "Dell",
+      "type": "Portable",
+      "category": "Bureautique",
+      "prixAchat": 120.88,
+      "prixVente": 300.1,
+      "dateEntreStock": "2012-04-23T18:25:43.511Z"
+    },
+    {
+      "id": 2,
+      "modele": "MacBook Pro",
+      "marque": "Apple",
+      "type": "Fixe",
+      "category": "Bureautique",
+      "prixAchat": 1520,
+      "prixVente": 2000,
+      "dateEntreStock": "2020-07-24"
+    },
+    {
+      "id": 3,
+      "modele": "HP 25xp58",
+      "marque": "HP",
+      "type": "Fixe",
+      "category": "Gaming",
+      "prixAchat": 1600,
+      "prixVente": 1200,
+      "dateEntreStock": "2020-07-02"
+    },
+    {
+      "id": 4,
+      "modele": "fefefefef",
+      "marque": "Apple",
+      "type": "Fixe",
+      "category": "Bureautique",
+      "prixAchat": 155,
+      "prixVente": 66,
+      "dateEntreStock": "2020-07-02T13:08:47.204Z"
+    }
+  ]
+}

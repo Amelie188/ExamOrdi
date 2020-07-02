@@ -1,0 +1,44 @@
+<h1>Nos ordinateurs</h1>
+<br>
+<br>
+<button id="addOrdinateurLink" class="btn btn-outline-secondary" ><a routerLink="/ordinateur/add">Ajouter un ordinateur</a></button>
+<br>
+<br>
+
+<p id="stock">Vous avez actuellement {{ ordinateur.length }} ordinateurs en stock</p>
+
+
+<div id ="card" class=" row row-cols-md-12 row-cols-sm-8" style="margin-top: 2rem; margin-left: 2rem; margin-right: 2rem;">
+   
+   
+    <div *ngFor="let ordinateur of ordinateur" class="card h-200">
+        <!-- <img src="../../../assets/images/{{voiture.photo}}" class="card-img-top" alt="photo voiture"> -->
+        <div class="card-body" class='tableline'>
+            <img src="../../../assets/images/home-office-336373__340.png" class="img-fluid">
+            <h4 class="card-title text-center"><span>{{ ordinateur.marque }}</span></h4>
+
+            <h5 class="card-title text-center"> {{ ordinateur.modele }}</h5>
+           
+            <p id="ref">réf: {{ ordinateur.id }}</p>
+            <p> {{ ordinateur.type }}</p>
+            <p>{{ ordinateur.category }}</p>
+        
+            <br>
+            <p>Prix de vente: {{ ordinateur.prixVente }} €</p>
+            <p>Prix d'achat: {{ ordinateur.prixAchat }} €</p>
+            <p><span>Rentabilité:</span> {{ ordinateur.prixVente - ordinateur.prixAchat | number:'1.2-2'}}   €</p>
+            
+            <br>
+            <p class="card-text">Date d'entrée en stock:  {{ ordinateur.dateEntreStock | date: 'dd/MM/yyyy' }}</p>
+           
+            <button class="btn btn-outline-secondary"><a [routerLink]="['/ordinateur', ordinateur.id]">En savoir plus</a></button> 
+    
+            <button class="btn btn-outline-secondary"><a (click)="deleteOrdinateur(ordinateur.id)">Supprimer</a></button>  
+
+            <button class="btn btn-outline-secondary"><a [routerLink]="['/ordinateur/edit', ordinateur.id]">Modifier</a></button>  
+   
+        </div>
+    </div>
+   
+</div>
+

@@ -1,0 +1,40 @@
+h1{
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+    margin-top: 1rem;
+    font-size: 6rem;
+}
+#stock{
+    margin-left:2rem;
+    font-size: 2rem;
+}
+a{
+    text-decoration: none;
+    color: grey;
+}
+#addOrdinateurLink{
+    margin-left:55rem;
+}
+.card-body{
+    margin-right: 2rem;
+
+}
+span{
+    color:#990000
+
+}
+#ref{
+    text-align: center;
+}
+.card{
+    margin-right:2rem;
+    margin-bottom: 2rem;
+ 
+}
+h4{
+    margin-top: 2rem;
+}
+.btn{
+    margin-left:3rem;
+    margin-top: 1rem;
+}

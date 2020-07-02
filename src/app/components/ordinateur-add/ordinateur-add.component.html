@@ -1,0 +1,84 @@
+<h1>Je rentre en stock un ordinateur</h1>
+
+
+<div *ngIf="isLoading">
+
+<form  #ordinateurForm="ngForm" (ngSubmit)="submitOrdinateur()">
+
+
+<p>{{ ordinateur.dateEntreStock | date: 'dd/MM/yyyy'}}</p>
+
+<label for="nom">Nom du modèle</label>
+<input type="text" class="form-control" id="modele" name="modele" required [(ngModel)]="ordinateur.modele" #modele="ngModel">
+<div [hidden]="modele.valid"
+class="alert alert-warning">
+Merci de renseigner un modèle
+</div>  
+<br>
+
+<div>
+    <label for="Marque">Marque</label>
+    <br>
+    <input type="radio" value="Dell" name="marque" [(ngModel)]="ordinateur.marque" required #marque="ngModel"> Dell
+    <input type="radio" value="HP" name="marque" [(ngModel)]="ordinateur.marque" required #marque="ngModel"> HP
+    <input type="radio" value="Apple" name="marque" [(ngModel)]="ordinateur.marque" required #marque="ngModel"> Apple
+    <input type="radio" value="Asus" name="marque" [(ngModel)]="ordinateur.marque" required #marque="ngModel"> Asus
+</div>
+<br>
+
+
+<div class="input-group mb-3">
+  <div class="input-group-prepend">
+    <label class="input-group-text" for="type">Type</label>
+  </div>
+  <select class="custom-select" id="type" [(ngModel)]="ordinateur.type" name="type" #type="ngModel">
+    <!-- <option selected>Type...</option> -->
+    <option value="Portable">Portable</option>
+    <option value="Fixe">Fixe</option>
+    <option value="Tablette hybride">Tablette hybride</option>
+  </select>
+</div>
+<br>
+
+<div>
+    <label for="category">Catégorie</label>
+    <br>
+    <input type="radio" value="Gaming" name="category" [(ngModel)]="ordinateur.category" required #category="ngModel"> Gaming
+    <input type="radio" value="Bureautique" name="category" [(ngModel)]="ordinateur.category" required #category="ngModel"> Bureautique
+    <input type="radio" value="Premier prix " name="category" [(ngModel)]="ordinateur.category" required #category="ngModel"> Premier prix 
+</div>
+<br>
+
+<!-- <label for="dateEntreStock">Date d'entrée en stock</label>
+<input type="date" class="form-control" id="dateEntreStock" name="dateEntreStock" required [(ngModel)]="ordinateur.dateEntreStock" #dateEntreStock="ngModel">
+<div [hidden]="dateEntreStock.valid"
+class="alert alert-warning">
+Merci de renseigner une date d'entrée en stock
+</div>
+<br> -->
+
+
+<label for="prixAchat">Prix d'achat</label>
+<input type="number" class="form-control" id="prixAchat" name="prixAchat" required [(ngModel)]="ordinateur.prixAchat" #prixAchat="ngModel">
+<div [hidden]="prixAchat.valid"
+class="alert alert-warning">
+Merci de renseigner un prix d'achat 
+</div>
+<br>
+
+<label for="prixVente">Prix de vente</label>
+<input type="number" class="form-control" id="prixVente" name="prixVente" required [(ngModel)]="ordinateur.prixVente" #prixVente="ngModel">
+<div [hidden]="prixVente.valid"
+class="alert alert-warning">
+Merci de renseigner un prix de vente
+</div>
+<br>
+
+<input class="btn-lg btn-outline-dark" [disabled]="!ordinateurForm.valid"  id="submitOrdinateur" type="submit">
+</form>
+
+<button class="btn btn-outline-dark"><a [routerLink]="['/ordinateur']">Je ne veux plus</a></button>  
+
+</div>
+
+<div *ngIf="!isLoading">On prend son mal en patience, svp, ca arrive...</div>

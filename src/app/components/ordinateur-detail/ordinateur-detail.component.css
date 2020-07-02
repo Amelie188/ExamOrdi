@@ -1,0 +1,39 @@
+h1{
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+    margin-top: 2rem;
+    font-size: 6rem;
+    color:#990000
+}
+.card{
+    margin-left: 5rem;
+    margin-top: 5rem;
+}
+span{
+    color:#990000
+
+}
+
+h2{
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+    margin-top: 2rem;
+    font-size: 6rem;
+}
+button{
+    margin-left:6rem;
+    color: black;
+}
+a{
+    text-decoration: none;
+}
+h5{
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+    margin-top: 2rem;
+    margin-left:6rem;
+}
+
+img{
+    margin-left:4rem;
+}

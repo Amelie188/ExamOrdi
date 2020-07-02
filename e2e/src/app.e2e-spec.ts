@@ -10,6 +10,7 @@ describe('workspace-project App', () => {
 
   it('should display welcome message', () => {
     page.navigateTo();
+    page.sleep();
     expect(page.getTitleText()).toEqual('examOrdi app is running!');
   });
 
